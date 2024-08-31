@@ -10,18 +10,10 @@ body {
 }
 
 .main {
-  /* height: inherit; */
   height: 100%;
   display: grid;
   place-items: center;
 }
-
-/* .openModalButton {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}; */
 
 .openModalButton {
   padding: 0.5rem 1rem;
@@ -36,7 +28,7 @@ body {
 }
 
 .modal {
-   background-color: palegoldenrod;
+   background-color: rgba(0, 0, 0, 0.506);
    position: fixed;
    top: 0;
    left: 0;
@@ -50,6 +42,7 @@ body {
    background-color: #fff;
    padding: 2rem;
    border-radius: 1rem;
+   position: relative;
 }
 
 .modal_buttons {
@@ -59,4 +52,19 @@ body {
 
 .close {
    display: none;
+}
+
+.close_modal {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: 1.2rem;
+   background-color: transparent;
+}
+
+.overflow_hidden {
+   overflow: hidden;
 }

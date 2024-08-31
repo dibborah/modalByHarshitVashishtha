@@ -1,20 +1,22 @@
 const modal = document.querySelector('.modal');
 const openModalButton = document.querySelector('.openModalButton');
-const modalButtons = document.querySelector('.modal_buttons');
+const closeButton = document.querySelector('.close_modal');
 
 const openModal = () => {
     modal.classList.remove('close');
-}
+    document.body.classList.add('overflow_hidden');
+};
 
 const closeModal = () => {
     modal.classList.add('close');
+    document.body.classList.remove('overflow_hidden');
 }
 
 openModalButton.addEventListener('click', (e) => {
     openModal();
 })
 
-modalButtons.addEventListener('click', () => {
+closeButton.addEventListener('click', () => {
     closeModal();
 })
 
@@ -24,3 +26,6 @@ modal.addEventListener('click', (e) => {
     }
 })
 
+// note:
+// In coding we also need to reset what we once do
+// To makes things work exactly the same as it was before we did it

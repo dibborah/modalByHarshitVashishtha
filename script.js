@@ -16,14 +16,18 @@ openModalButton.addEventListener('click', (e) => {
     openModal();
 })
 
-closeButton.addEventListener('click', () => {
-    closeModal();
-})
+// closeButton.addEventListener('click', () => {
+//     closeModal();
+// })
 
 modal.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
+    if (e.target.classList.contains('close_modal')
+         || e.target.classList.contains('overlay')) {
         closeModal();
     }
+    // if (e.target.classList.contains('overlay')) {
+    //     closeModal();
+    // }
 })
 
 // note:
